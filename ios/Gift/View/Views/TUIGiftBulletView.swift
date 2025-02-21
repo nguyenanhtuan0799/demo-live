@@ -28,9 +28,7 @@ class TUIGiftBulletView: UIView {
     }()
 
     private let giftIconView: UIImageView = {
-        let view = UIImageView(frame: CGRect(x: -200, y: 5, width: 40, height: 40))
-        view.layer.masksToBounds = true
-        view.layer.cornerRadius = view.mm_h * 0.5
+        let view = UIImageView(frame: CGRect(x: -400, y: 5, width: 200, height: 200))
         return view
     }()
 
@@ -54,7 +52,7 @@ class TUIGiftBulletView: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        mm_h = 50
+        mm_h = 200
         setupUI()
     }
 
@@ -108,7 +106,7 @@ class TUIGiftBulletView: UIView {
         contentAnimation.values = [NSNumber(value: Float(-mm_w * 0.5)),
                                    NSNumber(value: Float(mm_w * 0.5 + 40)),
                                    NSNumber(value: Float(mm_w * 0.5 + 20)),]
-        contentAnimation.duration = 0.25
+        contentAnimation.duration = 0.5
         contentAnimation.delegate = self
         contentAnimation.fillMode = .forwards
         contentAnimation.isRemovedOnCompletion = false
@@ -165,14 +163,14 @@ class TUIGiftBulletView: UIView {
 
 extension TUIGiftBulletView {
     func setupUI() {
-        clipsToBounds = true
-        layer.masksToBounds = true
-        layer.cornerRadius = mm_h * 0.5
-        backgroundColor = .g2.withAlphaComponent(0.4)
-        addSubview(avatarView)
+//        clipsToBounds = true
+//        layer.masksToBounds = true
+//        layer.cornerRadius = mm_h * 0.5
+//        backgroundColor = .g2.withAlphaComponent(0.4)
+//        addSubview(avatarView)
         addSubview(giftIconView)
-        addSubview(nickNameLabel)
-        addSubview(giveDescLabel)
+//        addSubview(nickNameLabel)
+//        addSubview(giveDescLabel)
     }
 }
 

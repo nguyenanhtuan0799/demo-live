@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 class InputMessageView: UIView {
 
@@ -20,6 +21,8 @@ class InputMessageView: UIView {
     super.layoutSubviews()
     // Đảm bảo layout liveCoreView đúng kích thước
     barrageInputView.frame = self.bounds
+    barrageInputView.layer.cornerRadius = 12
+    barrageInputView.clipsToBounds = true
   }
 
   required init?(coder aDecoder: NSCoder) {

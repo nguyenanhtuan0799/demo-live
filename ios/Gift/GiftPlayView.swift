@@ -87,6 +87,7 @@ class GiftPlayView: UIView {
         manager.delegate = self
         
         TUIGiftStore.shared.giftDataMap.addObserver(self) { [weak self] giftDataMap, _ in
+          
             guard let self = self, let giftData = giftDataMap[self.roomId] else { return }
             self.delegate?.giftPlayView(self,
                                         onReceiveGift: giftData.gift,

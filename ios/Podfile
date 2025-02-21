@@ -15,7 +15,23 @@ if linkage != nil
 end
 
 target 'liveStremSDKIos' do
+
+
+
+  pod 'SVGAPlayer', :modular_headers => true
+  pod 'Protobuf', :modular_headers => true
+  pod 'LiveKit', :modular_headers => true
+  pod 'LiveStreamCore'
+  pod 'TUILiveKit'
+  pod 'RTCCommon'
+  pod 'TUICore'
+  pod 'SnapKit'
+
+
+
+
   config = use_native_modules!
+
 
   use_react_native!(
     :path => config[:reactNativePath],

@@ -83,6 +83,7 @@ class TUIGiftView: UIView {
         mm_h = 53 + 74
         mm_w = 74
         setupUI()
+      
     }
 
     required init?(coder: NSCoder) {
@@ -98,11 +99,6 @@ class TUIGiftView: UIView {
     
     private func setSelectedState(_ isSelected: Bool) {
         imageBgView.layer.borderWidth = isSelected ? 2 : 0
-        normalImageView.isHidden = isSelected
-        giftNameLabel.isHidden = isSelected
-        pointLabel.isHidden = isSelected
-        selectedImageView.isHidden = !isSelected
-        sendButton.isHidden = !isSelected
     }
 }
 
@@ -116,7 +112,7 @@ extension TUIGiftView {
         addSubview(selectedImageView)
         addSubview(giftNameLabel)
         addSubview(pointLabel)
-        addSubview(sendButton)
+//        addSubview(sendButton)
     }
 }
 

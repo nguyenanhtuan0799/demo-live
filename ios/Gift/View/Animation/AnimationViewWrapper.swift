@@ -68,6 +68,7 @@ class AnimationViewWrapper: UIView {
 
 extension AnimationViewWrapper: AnimationView {
     func playAnimation(playUrl: String, onFinished: @escaping ((Int)->Void)) {
+   
         LiveKitLog.info("\(#file)","\(#line)","playAnimation:[playUrl:\(playUrl)]")
         let type = getSourceType(playUrl: playUrl)
         if type == .other {

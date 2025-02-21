@@ -90,6 +90,7 @@ extension BarrageStreamView: UITableViewDataSource {
             cell.setContent(barrage, ownerId: ownerId)
         }
         cell.transform = CGAffineTransform(scaleX: 1, y: -1)
+     
         return cell
     }
 

@@ -1,5 +1,5 @@
 //
-//  GiftViewManager.swift
+//  InputMessageViewManager.swift
 //  liveStremSDKIos
 //
 //  Created by Nguyễn Anh Tuấn on 21/2/25.
@@ -8,11 +8,11 @@
 import Foundation
 import React
 
-@objc(GiftViewManager)
-class GiftViewManager: RCTViewManager {
+@objc(InputMessageViewManager)
+class InputMessageViewManager: RCTViewManager {
 
   override func view() -> UIView! {
-    let view = GiftView()
+    let view = InputMessageView()
     return view
   }
 
